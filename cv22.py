@@ -19,6 +19,7 @@ while True:
             break
 
     else:
+        print("am going out")
         break
 
 cap.release()
