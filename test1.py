@@ -10,6 +10,7 @@ while True:
         cv2.imshow("frame",frame)
         # cv2.waitkey(10)
         if cv2.waitKey(1) & 0xFF == ord('q'):
+            print("am going out")
             break
 cap.release()
 cv2.destroyAllWindows()
