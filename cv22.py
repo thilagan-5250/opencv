@@ -1,26 +1,17 @@
 import numpy as np
 import cv2
-
-# Capture video from file
-cap = cv2.VideoCapture('your video')
-
-while True:
-
+cap = cv2.VideoCapture(0)
+while(True):
+        # Capture frame-by-frame
     ret, frame = cap.read()
-
-    if ret == True:
-
+    if ret:
+    # Our operations on the frame come here
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
+        cv2.imshow("frfgame",frame)
+        # Display the resulting frame
         cv2.imshow('frame',gray)
-
-
-        if cv2.waitKey(30) & 0xFF == ord('q'):
+        if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
-    else:
-        print("am going out")
-        break
-
+# When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
