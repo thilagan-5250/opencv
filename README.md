@@ -1,5 +1,5 @@
 # opencv
-to stream 
+to stream  your cam
 
 #install on windows
 
